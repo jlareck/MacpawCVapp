@@ -14,7 +14,10 @@
 		1ECEBFAE226B051200ADE0D8 /* macpawCVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBFAD226B051200ADE0D8 /* macpawCVUITests.swift */; };
 		1ECEBFBC226B06AA00ADE0D8 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBFBB226B06AA00ADE0D8 /* SplitViewController.swift */; };
 		1ECEBFBF226B151200ADE0D8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBFBD226B151200ADE0D8 /* TableViewController.swift */; };
-		1ECEBFC2226B156E00ADE0D8 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBFC1226B156E00ADE0D8 /* DescriptionViewController.swift */; };
+		1EFE15FF2274CA030023AF70 /* GeneralInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE15FE2274CA030023AF70 /* GeneralInformationViewController.swift */; };
+		1EFE16012274CA2D0023AF70 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE16002274CA2D0023AF70 /* EducationViewController.swift */; };
+		1EFE16032274CC390023AF70 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE16022274CC390023AF70 /* SkillsViewController.swift */; };
+		1EFE16052275B2340023AF70 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE16042275B2340023AF70 /* TabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +52,10 @@
 		1ECEBFAF226B051200ADE0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ECEBFBB226B06AA00ADE0D8 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		1ECEBFBD226B151200ADE0D8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		1ECEBFC1226B156E00ADE0D8 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		1EFE15FE2274CA030023AF70 /* GeneralInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInformationViewController.swift; sourceTree = "<group>"; };
+		1EFE16002274CA2D0023AF70 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		1EFE16022274CC390023AF70 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
+		1EFE16042275B2340023AF70 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +113,10 @@
 				1ECEBF99226B051100ADE0D8 /* macpawCV.entitlements */,
 				1ECEBFBB226B06AA00ADE0D8 /* SplitViewController.swift */,
 				1ECEBFBD226B151200ADE0D8 /* TableViewController.swift */,
-				1ECEBFC1226B156E00ADE0D8 /* DescriptionViewController.swift */,
+				1EFE15FE2274CA030023AF70 /* GeneralInformationViewController.swift */,
+				1EFE16002274CA2D0023AF70 /* EducationViewController.swift */,
+				1EFE16022274CC390023AF70 /* SkillsViewController.swift */,
+				1EFE16042275B2340023AF70 /* TabViewController.swift */,
 			);
 			path = macpawCV;
 			sourceTree = "<group>";
@@ -260,8 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFE16052275B2340023AF70 /* TabViewController.swift in Sources */,
+				1EFE15FF2274CA030023AF70 /* GeneralInformationViewController.swift in Sources */,
 				1ECEBF90226B050F00ADE0D8 /* AppDelegate.swift in Sources */,
-				1ECEBFC2226B156E00ADE0D8 /* DescriptionViewController.swift in Sources */,
+				1EFE16012274CA2D0023AF70 /* EducationViewController.swift in Sources */,
+				1EFE16032274CC390023AF70 /* SkillsViewController.swift in Sources */,
 				1ECEBFBF226B151200ADE0D8 /* TableViewController.swift in Sources */,
 				1ECEBFBC226B06AA00ADE0D8 /* SplitViewController.swift in Sources */,
 			);

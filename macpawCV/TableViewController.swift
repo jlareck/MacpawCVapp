@@ -10,12 +10,16 @@ import Cocoa
 var array = ["Experience", "Work", "Education"]
 var descArray = ["No experience", "No work", "KNU"]
 var index: Int = 0
-class TableViewController: NSViewController,NSTableViewDataSource, NSTableViewDelegate  {
+class TableViewController: NSViewController,NSTableViewDataSource, NSTableViewDelegate, NSTabViewDelegate  {
     @IBOutlet weak var tableView: NSTableView!
-    var delegate: SendManager?
+ //   var delegate: SendManager?
    // let descVC = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "Desc") as! DescriptionViewController
+    
+  
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         // Do view setup here.
        // self.delegate = descVC
         tableView?.delegate = self
@@ -34,9 +38,11 @@ class TableViewController: NSViewController,NSTableViewDataSource, NSTableViewDe
         index = tableView.selectedRow
         print(descArray[index])
      //
-        var userInfo = ["info":descArray[index]]
+    var userInfo = ["info":index]
+        
        // delegate?.sendString(str: descArray[index])
-        NotificationCenter.default.post(name: NSNotification.Name("viewLoaded"), object: nil, userInfo: userInfo)
+   
+    NotificationCenter.default.post(name: NSNotification.Name("viewLoaded"), object: nil, userInfo: userInfo)
     }
 
 }

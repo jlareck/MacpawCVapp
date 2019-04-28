@@ -15,7 +15,7 @@ class DescriptionViewController: NSViewController  {
     @IBOutlet weak var descriptionField: NSTextField!
   //  var str:String = ""
     //let tableVC = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "table") as! TableViewController
-    let tableVC = TableViewController()
+   // let tableVC = TableViewController()
     var string: String = "fdsa"
 //    func sendString(str: String) {
 //        descriptionField.stringValue = str
@@ -30,11 +30,11 @@ class DescriptionViewController: NSViewController  {
        // self.tableVC.delegate? = self
         //updateView()
     
-        NotificationCenter.default.addObserver(self, selector: #selector(viewWasLoaded), name: NSNotification.Name("viewLoaded"), object: nil)
+       
   
     }
-    @objc private func viewWasLoaded(_ notification: Notification) {
-        descriptionField.stringValue =  notification.userInfo?["info"] as? String ?? "No info"
-    }
+//    @objc private func viewWasLoaded(_ notification: Notification) {
+//        descriptionField.stringValue =  notification.userInfo?["info"] as? String ?? "No info"
+//    }
     
 }
