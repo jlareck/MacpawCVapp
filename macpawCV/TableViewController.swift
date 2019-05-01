@@ -14,7 +14,9 @@ class TableViewController: NSViewController,NSTableViewDataSource, NSTableViewDe
  //   var delegate: SendManager?
    // let descVC = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "Desc") as! DescriptionViewController
     
-  
+    override func viewWillAppear() {
+        tableView.rowHeight = 50
+    }
     private let array = ["General information", "Education", "Skills"]
  //   var descArray = ["No experience", "No work", "KNU"]
     override func viewDidLoad() {

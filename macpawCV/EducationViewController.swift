@@ -11,6 +11,9 @@ import Cocoa
 class EducationViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 
     @IBOutlet weak var EducationTableView: NSTableView!
+    override func viewWillAppear() {
+        EducationTableView.rowHeight = 50
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         EducationTableView?.delegate = self

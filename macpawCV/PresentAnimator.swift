@@ -8,17 +8,7 @@
 
 import Foundation
 import Cocoa
-class ReplaceSegue: NSStoryboardSegue {
-    override func perform() {
-        if let fromViewController = sourceController as? NSViewController {
-            if let toViewController = destinationController as? NSViewController {
-                // no animation.
-                fromViewController.view.window?.contentViewController = toViewController
-            }
-        }
-    }
-    
-}
+
 class PresentAnimator: NSObject, NSViewControllerPresentationAnimator {
     
     enum Direction {
@@ -79,12 +69,10 @@ class PresentAnimator: NSObject, NSViewControllerPresentationAnimator {
         NSAnimationContext.runAnimationGroup({ (context) in
             context.duration = 0.4
             viewController.view.animator().frame = toFrame
-            fromViewController.view.window?.contentViewController = viewController
+           // fromViewController.view.window?.contentViewController = viewController
             viewController.view.animator().alphaValue = 1.0
             
         }, completionHandler: nil)
-        
-        // 需要重新计算 view loop
         fromViewController.view.window?.recalculateKeyViewLoop()
     }
     

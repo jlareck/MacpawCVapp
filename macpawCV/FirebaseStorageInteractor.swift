@@ -14,7 +14,7 @@ final class FirebaseStorageInteractor{
     private(set) var description: Description?
     //    var description:Description?
     
-    func fetch(handler: @escaping (Description?)->()) {
+    func fetch(handler: @escaping (Result<Description?, Error>)->()) {
         //  let authString:String = userName + ":" + password
         //  let headerField = ["Authorization": "Basic " + authString.base64Encoded()!]
         var request = URLRequest(url: url)
