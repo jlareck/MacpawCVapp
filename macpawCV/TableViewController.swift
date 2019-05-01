@@ -7,16 +7,16 @@
 //
 
 import Cocoa
-var array = ["Experience", "Work", "Education"]
-var descArray = ["No experience", "No work", "KNU"]
+
 var index: Int = 0
-class TableViewController: NSViewController,NSTableViewDataSource, NSTableViewDelegate, NSTabViewDelegate  {
+class TableViewController: NSViewController,NSTableViewDataSource, NSTableViewDelegate  {
     @IBOutlet weak var tableView: NSTableView!
  //   var delegate: SendManager?
    // let descVC = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "Desc") as! DescriptionViewController
     
   
-
+    private let array = ["General information", "Education", "Skills"]
+ //   var descArray = ["No experience", "No work", "KNU"]
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -36,9 +36,9 @@ class TableViewController: NSViewController,NSTableViewDataSource, NSTableViewDe
 
     func tableViewSelectionDidChange(_ notification: Notification) {
         index = tableView.selectedRow
-        print(descArray[index])
+      //  print(descArray[index])
      //
-    var userInfo = ["info":index]
+    let userInfo = ["info":index]
         
        // delegate?.sendString(str: descArray[index])
    

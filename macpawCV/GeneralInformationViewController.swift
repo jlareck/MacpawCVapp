@@ -9,10 +9,20 @@
 import Cocoa
 
 class GeneralInformationViewController: NSViewController {
-
-   override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
-    }
+ 
+    @IBOutlet weak var fullName: NSTextField!
     
+    @IBOutlet weak var age: NSTextField!
+    
+    @IBOutlet weak var email: NSTextField!
+    
+    @IBOutlet weak var phoneNumber: NSTextField!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fullName.stringValue = "Full name: "+(FirebaseStorageInteractor.shared.description?.generalInformation.fullName)!
+        age.stringValue = "Age: \(Int32((FirebaseStorageInteractor.shared.description?.generalInformation.age)!))"
+        email.stringValue = "Email: " + ((FirebaseStorageInteractor.shared.description?.generalInformation.email)!)
+        phoneNumber.stringValue = "Phone number: "+(FirebaseStorageInteractor.shared.description?.generalInformation.mobilePhoneNumber)!
+        
+    }
 }

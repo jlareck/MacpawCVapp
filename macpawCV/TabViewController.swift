@@ -27,7 +27,7 @@ class TabViewController: NSTabViewController {
     
     @objc private func viewWasLoaded(_ notification: Notification) {
         value =  notification.userInfo?["info"] as? Int ?? 0
-        tabViewItem.selectTabViewItem(at: value ?? 1)
+        tabViewItem.selectTabViewItem(at: value ?? 0)
     }
 
 }
