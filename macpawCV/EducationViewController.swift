@@ -29,6 +29,7 @@ class EducationViewController: NSViewController, NSTableViewDelegate, NSTableVie
     }
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cell = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as! NSTableCellView
+        cell.textField?.lineBreakMode = .byWordWrapping
         cell.textField?.stringValue = eduacationArray[row]
         return cell
     }

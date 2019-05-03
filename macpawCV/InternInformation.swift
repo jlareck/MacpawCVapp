@@ -39,7 +39,8 @@ struct Description: Decodable{
         }
         struct Others:Decodable{
             var git:String
-            var patterns:[String]
+            var technologies:[String]
+            var algorithms:String
         }
     }
     

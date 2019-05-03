@@ -21,7 +21,7 @@
 		1EFE160722760D2C0023AF70 /* InternInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE160622760D2C0023AF70 /* InternInformation.swift */; };
 		1EFE160922760E2A0023AF70 /* FirebaseStorageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE160822760E2A0023AF70 /* FirebaseStorageInteractor.swift */; };
 		1EFE160B227611F10023AF70 /* EtryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE160A227611F10023AF70 /* EtryViewController.swift */; };
-		1EFE160D22797B0E0023AF70 /* PresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE160C22797B0D0023AF70 /* PresentAnimator.swift */; };
+		1EFEF91C227C2AE50096D990 /* AccomplishmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFEF91B227C2AE50096D990 /* AccomplishmentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,7 @@
 		1EFE160622760D2C0023AF70 /* InternInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternInformation.swift; sourceTree = "<group>"; };
 		1EFE160822760E2A0023AF70 /* FirebaseStorageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageInteractor.swift; sourceTree = "<group>"; };
 		1EFE160A227611F10023AF70 /* EtryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtryViewController.swift; sourceTree = "<group>"; };
-		1EFE160C22797B0D0023AF70 /* PresentAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimator.swift; sourceTree = "<group>"; };
+		1EFEF91B227C2AE50096D990 /* AccomplishmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +128,7 @@
 				1EFE160622760D2C0023AF70 /* InternInformation.swift */,
 				1EFE160822760E2A0023AF70 /* FirebaseStorageInteractor.swift */,
 				1EFE160A227611F10023AF70 /* EtryViewController.swift */,
-				1EFE160C22797B0D0023AF70 /* PresentAnimator.swift */,
+				1EFEF91B227C2AE50096D990 /* AccomplishmentsViewController.swift */,
 			);
 			path = macpawCV;
 			sourceTree = "<group>";
@@ -288,10 +288,10 @@
 				1ECEBF90226B050F00ADE0D8 /* AppDelegate.swift in Sources */,
 				1EFE16012274CA2D0023AF70 /* EducationViewController.swift in Sources */,
 				1EFE16032274CC390023AF70 /* SkillsViewController.swift in Sources */,
+				1EFEF91C227C2AE50096D990 /* AccomplishmentsViewController.swift in Sources */,
 				1ECEBFBF226B151200ADE0D8 /* TableViewController.swift in Sources */,
 				1ECEBFBC226B06AA00ADE0D8 /* SplitViewController.swift in Sources */,
 				1EFE160922760E2A0023AF70 /* FirebaseStorageInteractor.swift in Sources */,
-				1EFE160D22797B0E0023AF70 /* PresentAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

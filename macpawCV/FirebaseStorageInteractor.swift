@@ -10,11 +10,11 @@ import Foundation
 final class FirebaseStorageInteractor{
     private init(){}
     static let shared = FirebaseStorageInteractor.init()
-    private let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/cvbeta-e7808.appspot.com/o/profile.json?alt=media&token=a7f4a0ee-aa6c-4e31-8a3f-2e53cb93d371")!
+    private let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/cvbeta-e7808.appspot.com/o/profile.json?alt=media&token=5d96dd19-1cb9-47e3-a371-bf01a094c9cb")!
     private(set) var description: Description?
     //    var description:Description?
     
-    func fetch(handler: @escaping (Result<Description?, Error>)->()) {
+    func fetch(handler: @escaping (Result<Description, Error>)->()) {
         //  let authString:String = userName + ":" + password
         //  let headerField = ["Authorization": "Basic " + authString.base64Encoded()!]
         var request = URLRequest(url: url)
@@ -26,12 +26,13 @@ final class FirebaseStorageInteractor{
             guard let data = data else { return print("Error") }
             do {
                 let description = try JSONDecoder().decode(Description.self, from: data)
-                DispatchQueue.main.async {
+               DispatchQueue.main.async {
                     self.description = description
-                    handler(description)
+                    handler(.success(description))
                 }
             } catch {
                 print("json error: \(error)")
+                handler(.failure(error))
             }
             
         }
