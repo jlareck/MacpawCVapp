@@ -44,7 +44,7 @@ class TableViewController: NSViewController,NSTableViewDataSource, NSTableViewDe
         
        // delegate?.sendString(str: descArray[index])
    
-    NotificationCenter.default.post(name: NSNotification.Name("viewLoaded"), object: nil, userInfo: userInfo)
+    NotificationCenter.default.post(name: NSNotification.Name("selectionChanged"), object: nil, userInfo: userInfo)
     }
 
 }

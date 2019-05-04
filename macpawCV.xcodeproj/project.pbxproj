@@ -119,16 +119,9 @@
 				1ECEBF95226B051100ADE0D8 /* Main.storyboard */,
 				1ECEBF98226B051100ADE0D8 /* Info.plist */,
 				1ECEBF99226B051100ADE0D8 /* macpawCV.entitlements */,
-				1ECEBFBB226B06AA00ADE0D8 /* SplitViewController.swift */,
-				1ECEBFBD226B151200ADE0D8 /* TableViewController.swift */,
-				1EFE15FE2274CA030023AF70 /* GeneralInformationViewController.swift */,
-				1EFE16002274CA2D0023AF70 /* EducationViewController.swift */,
-				1EFE16022274CC390023AF70 /* SkillsViewController.swift */,
-				1EFE16042275B2340023AF70 /* TabViewController.swift */,
-				1EFE160622760D2C0023AF70 /* InternInformation.swift */,
+				1EFEF91E227DEBD70096D990 /* View Controllers */,
+				1EFEF91F227DEC000096D990 /* Models */,
 				1EFE160822760E2A0023AF70 /* FirebaseStorageInteractor.swift */,
-				1EFE160A227611F10023AF70 /* EtryViewController.swift */,
-				1EFEF91B227C2AE50096D990 /* AccomplishmentsViewController.swift */,
 			);
 			path = macpawCV;
 			sourceTree = "<group>";
@@ -149,6 +142,29 @@
 				1ECEBFAF226B051200ADE0D8 /* Info.plist */,
 			);
 			path = macpawCVUITests;
+			sourceTree = "<group>";
+		};
+		1EFEF91E227DEBD70096D990 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1ECEBFBB226B06AA00ADE0D8 /* SplitViewController.swift */,
+				1ECEBFBD226B151200ADE0D8 /* TableViewController.swift */,
+				1EFE15FE2274CA030023AF70 /* GeneralInformationViewController.swift */,
+				1EFE16002274CA2D0023AF70 /* EducationViewController.swift */,
+				1EFE16022274CC390023AF70 /* SkillsViewController.swift */,
+				1EFE16042275B2340023AF70 /* TabViewController.swift */,
+				1EFE160A227611F10023AF70 /* EtryViewController.swift */,
+				1EFEF91B227C2AE50096D990 /* AccomplishmentsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1EFEF91F227DEC000096D990 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1EFE160622760D2C0023AF70 /* InternInformation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

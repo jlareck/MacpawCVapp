@@ -11,7 +11,7 @@ import Cocoa
 class AccomplishmentsViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource  {
 
     @IBOutlet weak var accomplishmentsTableView: NSTableView!
-    
+    var accomplishmentsModel: [String]?
     override func viewWillAppear() {
         accomplishmentsTableView.rowHeight = 70
     }

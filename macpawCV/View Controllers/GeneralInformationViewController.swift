@@ -17,12 +17,13 @@ class GeneralInformationViewController: NSViewController {
     @IBOutlet weak var email: NSTextField!
     
     @IBOutlet weak var phoneNumber: NSTextField!
+    var generalInformationModel: GeneralInformation?
     override func viewDidLoad() {
         super.viewDidLoad()
-        fullName.stringValue = "Full name: "+(FirebaseStorageInteractor.shared.description?.generalInformation.fullName)!
-        age.stringValue = "Age: \(Int32((FirebaseStorageInteractor.shared.description?.generalInformation.age)!))"
-        email.stringValue = "Email: " + ((FirebaseStorageInteractor.shared.description?.generalInformation.email)!)
-        phoneNumber.stringValue = "Phone number: "+(FirebaseStorageInteractor.shared.description?.generalInformation.mobilePhoneNumber)!
+        fullName.stringValue = "Full name: "+(generalInformationModel?.fullName)!
+        age.stringValue = "Age: \(Int32((generalInformationModel?.age)!))"
+        email.stringValue = "Email: " + ((generalInformationModel?.email)!)
+        phoneNumber.stringValue = "Phone number: "+(generalInformationModel?.mobilePhoneNumber)!
         
     }
 }

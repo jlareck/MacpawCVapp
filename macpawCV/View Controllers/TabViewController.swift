@@ -16,11 +16,11 @@ class TabViewController: NSTabViewController {
     
     @IBOutlet weak var tabViewItem: NSTabView!
     
-  
+    
     var value: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(viewWasLoaded), name: NSNotification.Name("viewLoaded"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(viewWasLoaded), name: NSNotification.Name("selectionChanged"), object: nil)
     }
     
     let tableVC = TableViewController()

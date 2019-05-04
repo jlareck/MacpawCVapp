@@ -12,15 +12,12 @@ final class FirebaseStorageInteractor{
     static let shared = FirebaseStorageInteractor.init()
     private let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/cvbeta-e7808.appspot.com/o/profile.json?alt=media&token=5d96dd19-1cb9-47e3-a371-bf01a094c9cb")!
     private(set) var description: Description?
-    //    var description:Description?
     
     func fetch(handler: @escaping (Result<Description, Error>)->()) {
-        //  let authString:String = userName + ":" + password
-        //  let headerField = ["Authorization": "Basic " + authString.base64Encoded()!]
+
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        //   request.allHTTPHeaderFields = headerField
-        
+
        
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data else { return print("Error") }

@@ -18,11 +18,19 @@ class EntryViewController: NSViewController {
             case .success(_):
                
                     let vc = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "Split") as! SplitViewController
-                    //NSApplication.shared.mainWindow?.close()
-                    // self.present(vc as NSViewController , animator: PresentAnimator.init(with: .bottom))
-
+                   
+                  
+                    ((vc.splitViewItems[1].viewController as! TabViewController).tabViewItems[0].viewController as! GeneralInformationViewController).generalInformationModel = FirebaseStorageInteractor.shared.description?.generalInformation
+                    
+                    ((vc.splitViewItems[1].viewController as! TabViewController).tabViewItems[1].viewController as! EducationViewController).educationModel = FirebaseStorageInteractor.shared.description?.education
+                    
+                    ((vc.splitViewItems[1].viewController as! TabViewController).tabViewItems[2].viewController as! SkillsViewController).skillsModel = FirebaseStorageInteractor.shared.description?.skills
+                    
+                    ((vc.splitViewItems[1].viewController as! TabViewController).tabViewItems[3].viewController as! AccomplishmentsViewController).accomplishmentsModel = FirebaseStorageInteractor.shared.description?.accomplishments
+                    
                     vc.view.frame = CGRect(x: 0,y: 0, width: 700, height: 350)
                     self.view.window?.contentViewController = vc
+              
                 
             case .failure(let error):
                 print(error)

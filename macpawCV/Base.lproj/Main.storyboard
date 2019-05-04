@@ -687,7 +687,7 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="139" y="240" width="537" height="301"/>
+                        <rect key="contentRect" x="139" y="240" width="425" height="301"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
@@ -699,7 +699,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.5" y="250.5"/>
+            <point key="canvasLocation" x="-9.5" y="250.5"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="t4y-zn-s8E">
@@ -709,26 +709,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="477" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oif-S3-wNH">
+                                <rect key="frame" x="128" y="194" width="206" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="My CV program" id="3zG-HO-LXQ">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xdu-eU-W4k">
-                                <rect key="frame" x="178" y="79" width="95" height="32"/>
+                                <rect key="frame" x="178" y="67" width="107" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Show CV" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Hv1-E0-8Qh">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="system" size="19"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="showCV:" target="Z5t-DE-VZv" id="H7x-Ld-TOe"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oif-S3-wNH">
-                                <rect key="frame" x="203" y="225" width="44" height="25"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="CV" id="3zG-HO-LXQ">
-                                    <font key="font" metaFont="system" size="25"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -772,10 +772,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="246" height="362"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="43" horizontalPageScroll="10" verticalLineScroll="43" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJS-7H-aPb">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="43" horizontalPageScroll="10" verticalLineScroll="43" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJS-7H-aPb">
                                 <rect key="frame" x="0.0" y="0.0" width="246" height="362"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <clipView key="contentView" ambiguous="YES" id="Vl1-to-npp">
+                                <clipView key="contentView" id="Vl1-to-npp">
                                     <rect key="frame" x="1" y="1" width="244" height="360"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -837,6 +836,12 @@
                                 </scroller>
                             </scrollView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="PJS-7H-aPb" firstAttribute="top" secondItem="lVI-bI-yin" secondAttribute="top" id="VmV-eT-1jW"/>
+                            <constraint firstAttribute="trailing" secondItem="PJS-7H-aPb" secondAttribute="trailing" id="YaN-F2-MuM"/>
+                            <constraint firstItem="PJS-7H-aPb" firstAttribute="leading" secondItem="lVI-bI-yin" secondAttribute="leading" id="iYr-eM-02p"/>
+                            <constraint firstAttribute="bottom" secondItem="PJS-7H-aPb" secondAttribute="bottom" id="voU-qF-H6H"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="cGB-22-oie" id="z1p-cT-GjO"/>
