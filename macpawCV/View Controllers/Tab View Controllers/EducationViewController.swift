@@ -11,6 +11,8 @@ import Cocoa
 class EducationViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     
     @IBOutlet weak var EducationTableView: NSTableView!
+    var educationModel: Education?
+    var educationArray: [String]?
     override func viewWillAppear() {
         EducationTableView.rowHeight = 50
     }
@@ -18,11 +20,11 @@ class EducationViewController: NSViewController, NSTableViewDelegate, NSTableVie
         super.viewDidLoad()
         EducationTableView?.delegate = self
         EducationTableView?.dataSource = self
-        educationArray = ["School: \((educationModel?.school)!)","University: \((educationModel?.highEducation.university)!)", "Faculty: \((educationModel?.highEducation.faculty)!)","Specialty: \((educationModel?.highEducation.specialty)!)", "Other information: \((educationModel?.highEducation.other)!)"]
+        guard let educationModel = educationModel else {return print("No data")}
+        educationArray = ["School: \((educationModel.school))","University: \((educationModel.highEducation.university))", "Faculty: \((educationModel.highEducation.faculty))","Specialty: \((educationModel.highEducation.specialty))", "Other information: \((educationModel.highEducation.other))"]
         // Do view setup here.
     }
-    var educationModel: Education?
-    var educationArray: [String]?
+
     
     func numberOfRows(in tableView: NSTableView) -> Int {
         return 5

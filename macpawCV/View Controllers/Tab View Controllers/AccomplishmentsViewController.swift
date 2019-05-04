@@ -26,12 +26,14 @@ class AccomplishmentsViewController: NSViewController, NSTableViewDelegate, NSTa
     
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return (FirebaseStorageInteractor.shared.description?.accomplishments.count)!
+        
+        return (FirebaseStorageInteractor.shared.description?.accomplishments.count ?? 3)
     }
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cell = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as! NSTableCellView
         cell.textField?.lineBreakMode = .byWordWrapping
-        cell.textField?.stringValue = (FirebaseStorageInteractor.shared.description?.accomplishments[row])!
+      
+        cell.textField?.stringValue = (accomplishmentsModel?[row])!
         return cell
     }
 }

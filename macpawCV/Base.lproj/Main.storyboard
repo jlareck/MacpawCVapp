@@ -881,16 +881,16 @@
             </objects>
             <point key="canvasLocation" x="629" y="898"/>
         </scene>
-        <!--FirstViewController-->
+        <!--GeneralInformationViewController-->
         <scene sceneID="rjw-3u-QB0">
             <objects>
-                <viewController title="FirstViewController" storyboardIdentifier="FirstVC" id="ZhG-hG-Qdo" customClass="GeneralInformationViewController" customModule="macpawCV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="GeneralInformationViewController" storyboardIdentifier="FirstVC" id="ZhG-hG-Qdo" customClass="GeneralInformationViewController" customModule="macpawCV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="oQ5-gb-DCn">
                         <rect key="frame" x="0.0" y="0.0" width="417" height="368"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-tx-huN">
-                                <rect key="frame" x="6" y="276" width="384" height="63"/>
+                                <rect key="frame" x="6" y="274" width="264" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Full name" id="y3i-ir-y8J">
                                     <font key="font" metaFont="system" size="28"/>
@@ -925,12 +925,18 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4l-mA-F3z">
+                                <rect key="frame" x="314" y="268" width="56" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="HYw-X5-aay"/>
+                            </imageView>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="age" destination="Ocn-X6-1Gx" id="6hO-V5-nvu"/>
                         <outlet property="email" destination="oZt-D3-eLA" id="Vc1-1F-fjL"/>
                         <outlet property="fullName" destination="WHS-tx-huN" id="ml3-EH-Nmb"/>
+                        <outlet property="imageView" destination="a4l-mA-F3z" id="k5j-es-RPK"/>
                         <outlet property="phoneNumber" destination="HTH-gq-PPv" id="Ide-bj-CcD"/>
                     </connections>
                 </viewController>
@@ -938,10 +944,10 @@
             </objects>
             <point key="canvasLocation" x="1410.5" y="907"/>
         </scene>
-        <!--SecondViewController-->
+        <!--EducationViewController-->
         <scene sceneID="2tj-3X-alO">
             <objects>
-                <viewController title="SecondViewController" storyboardIdentifier="SecondVC" id="A6N-xW-anD" customClass="EducationViewController" customModule="macpawCV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="EducationViewController" storyboardIdentifier="SecondVC" id="A6N-xW-anD" customClass="EducationViewController" customModule="macpawCV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="tUJ-ce-dZJ">
                         <rect key="frame" x="0.0" y="0.0" width="479" height="409"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1017,10 +1023,10 @@
             </objects>
             <point key="canvasLocation" x="1008.5" y="1565.5"/>
         </scene>
-        <!--ThirdViewController-->
+        <!--SkillsViewController-->
         <scene sceneID="88z-gn-XJ8">
             <objects>
-                <viewController title="ThirdViewController" storyboardIdentifier="ThirdVC" id="1UE-3Y-Q1Y" customClass="SkillsViewController" customModule="macpawCV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SkillsViewController" storyboardIdentifier="ThirdVC" id="1UE-3Y-Q1Y" customClass="SkillsViewController" customModule="macpawCV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="42V-64-neF">
                         <rect key="frame" x="0.0" y="0.0" width="443" height="368"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1054,10 +1060,10 @@
             </objects>
             <point key="canvasLocation" x="442.5" y="1595"/>
         </scene>
-        <!--FourthViewController-->
+        <!--AccomplishmentsViewController-->
         <scene sceneID="wV3-pD-AcB">
             <objects>
-                <viewController title="FourthViewController" id="VCj-oe-3Fj" customClass="AccomplishmentsViewController" customModule="macpawCV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AccomplishmentsViewController" id="VCj-oe-3Fj" customClass="AccomplishmentsViewController" customModule="macpawCV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="aJJ-mW-7xy">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="374"/>
                         <autoresizingMask key="autoresizingMask"/>
