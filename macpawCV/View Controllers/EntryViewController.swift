@@ -28,7 +28,7 @@ class EntryViewController: NSViewController {
                     
                     ((vc.splitViewItems[1].viewController as! TabViewController).tabViewItems[3].viewController as! AccomplishmentsViewController).accomplishmentsModel = NetworkManager.shared.description?.accomplishments
                     
-                    vc.view.frame = CGRect(x: 0,y: 0, width: 700, height: 350)
+                    vc.view.frame = CGRect(x: 0,y: 0, width: 700, height: 380)
                     self.view.window?.contentViewController = vc
               
                 
@@ -41,7 +41,7 @@ class EntryViewController: NSViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.frame = CGRect(x: 0,y: 0, width: 400, height: 300)
+       // self.view.frame = CGRect(x: 0,y: 0, width: 400, height: 300)
         // Do view setup here.
     }
     override func viewWillAppear() {

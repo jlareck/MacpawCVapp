@@ -685,7 +685,7 @@
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="233" y="204" width="425" height="301"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -699,7 +699,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9.5" y="250.5"/>
+            <point key="canvasLocation" x="76" y="252"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="t4y-zn-s8E">
@@ -709,27 +709,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="477" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oif-S3-wNH">
-                                <rect key="frame" x="128" y="194" width="206" height="45"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="My CV program" id="3zG-HO-LXQ">
-                                    <font key="font" metaFont="system" size="30"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xdu-eU-W4k">
-                                <rect key="frame" x="178" y="67" width="107" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Show CV" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Hv1-E0-8Qh">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system" size="19"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="showCV:" target="Z5t-DE-VZv" id="H7x-Ld-TOe"/>
-                                </connections>
-                            </button>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="99" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="njh-xY-LHl">
+                                <rect key="frame" x="186" y="72" width="106" height="156"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Oif-S3-wNH">
+                                        <rect key="frame" x="-2" y="120" width="92" height="36"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="My CV" id="3zG-HO-LXQ">
+                                            <font key="font" metaFont="system" size="30"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xdu-eU-W4k">
+                                        <rect key="frame" x="-6" y="-7" width="118" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Show CV" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Hv1-E0-8Qh">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="19"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showCV:" target="Z5t-DE-VZv" id="H7x-Ld-TOe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="njh-xY-LHl" firstAttribute="centerY" secondItem="XVS-O8-efT" secondAttribute="centerY" id="sIO-RV-4sk"/>
+                            <constraint firstItem="njh-xY-LHl" firstAttribute="centerX" secondItem="XVS-O8-efT" secondAttribute="centerX" id="y1m-CF-Dtv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="Nln-ou-Kai" kind="custom" identifier="SegueToSplitView" id="h9k-pu-GCw"/>
@@ -1028,14 +1043,14 @@
             <objects>
                 <viewController title="SkillsViewController" storyboardIdentifier="ThirdVC" id="1UE-3Y-Q1Y" customClass="SkillsViewController" customModule="macpawCV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="42V-64-neF">
-                        <rect key="frame" x="0.0" y="0.0" width="504" height="370"/>
+                        <rect key="frame" x="0.0" y="0.0" width="505" height="370"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="130" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" translatesAutoresizingMaskIntoConstraints="NO" id="c0m-rG-0yA">
-                                <rect key="frame" x="20" y="126" width="464" height="197"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" translatesAutoresizingMaskIntoConstraints="NO" id="c0m-rG-0yA">
+                                <rect key="frame" x="6" y="283" width="479" height="67"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lwy-UZ-Qkb">
-                                        <rect key="frame" x="3" y="170" width="54" height="27"/>
+                                        <rect key="frame" x="3" y="40" width="54" height="27"/>
                                         <textFieldCell key="cell" alignment="justified" title="Skills" id="dzV-ex-paq">
                                             <font key="font" metaFont="system" size="22"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1063,9 +1078,10 @@
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="c0m-rG-0yA" firstAttribute="top" secondItem="42V-64-neF" secondAttribute="top" constant="47" id="A3O-XD-eFk"/>
-                            <constraint firstItem="c0m-rG-0yA" firstAttribute="leading" secondItem="42V-64-neF" secondAttribute="leading" constant="20" id="Vq4-Zo-TmQ"/>
-                            <constraint firstAttribute="trailing" secondItem="c0m-rG-0yA" secondAttribute="trailing" constant="20" id="bFK-Mf-ajA"/>
+                            <constraint firstAttribute="trailing" secondItem="c0m-rG-0yA" secondAttribute="trailing" constant="20" id="OTa-K3-gXe"/>
+                            <constraint firstItem="c0m-rG-0yA" firstAttribute="width" secondItem="42V-64-neF" secondAttribute="width" multiplier="0.8" constant="75" id="W8K-e4-SgC"/>
+                            <constraint firstItem="c0m-rG-0yA" firstAttribute="top" secondItem="42V-64-neF" secondAttribute="top" constant="20" id="a20-dH-z3F"/>
+                            <constraint firstItem="c0m-rG-0yA" firstAttribute="leading" secondItem="42V-64-neF" secondAttribute="leading" constant="6" id="jHo-IY-tag"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1085,10 +1101,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="500" height="374"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="45" horizontalPageScroll="10" verticalLineScroll="45" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXu-Ca-o6v">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="45" horizontalPageScroll="10" verticalLineScroll="45" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXu-Ca-o6v">
                                 <rect key="frame" x="0.0" y="0.0" width="500" height="374"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="lHr-xD-aKp">
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="lHr-xD-aKp">
                                     <rect key="frame" x="1" y="1" width="498" height="372"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1147,6 +1162,12 @@
                                 </scroller>
                             </scrollView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="XXu-Ca-o6v" secondAttribute="bottom" id="1GS-ye-ea5"/>
+                            <constraint firstItem="XXu-Ca-o6v" firstAttribute="top" secondItem="aJJ-mW-7xy" secondAttribute="top" id="4xC-ba-78q"/>
+                            <constraint firstAttribute="trailing" secondItem="XXu-Ca-o6v" secondAttribute="trailing" id="Shr-wh-Whu"/>
+                            <constraint firstItem="XXu-Ca-o6v" firstAttribute="leading" secondItem="aJJ-mW-7xy" secondAttribute="leading" id="h7B-wL-WK4"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="accomplishmentsTableView" destination="wdR-sY-Gdu" id="SfS-aC-JAI"/>
