@@ -20,13 +20,13 @@ class EntryViewController: NSViewController {
                     let vc = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "Split") as! SplitViewController
                    
                   
-                    ((vc.splitViewItems[1].viewController as! TabViewController).tabViewItems[0].viewController as! GeneralInformationViewController).generalInformationModel = FirebaseStorageInteractor.shared.description?.generalInformation
+                    ((vc.splitViewItems[1].viewController as! TabViewController).tabViewItems[0].viewController as! GeneralInformationViewController).generalInformationModel = NetworkManager.shared.description?.generalInformation
                     
-                    ((vc.splitViewItems[1].viewController as! TabViewController).tabViewItems[1].viewController as! EducationViewController).educationModel = FirebaseStorageInteractor.shared.description?.education
+                    ((vc.splitViewItems[1].viewController as! TabViewController).tabViewItems[1].viewController as! EducationViewController).educationModel = NetworkManager.shared.description?.education
                     
-                    ((vc.splitViewItems[1].viewController as! TabViewController).tabViewItems[2].viewController as! SkillsViewController).skillsModel = FirebaseStorageInteractor.shared.description?.skills
+                    ((vc.splitViewItems[1].viewController as! TabViewController).tabViewItems[2].viewController as! SkillsViewController).skillsModel = NetworkManager.shared.description?.skills
                     
-                    ((vc.splitViewItems[1].viewController as! TabViewController).tabViewItems[3].viewController as! AccomplishmentsViewController).accomplishmentsModel = FirebaseStorageInteractor.shared.description?.accomplishments
+                    ((vc.splitViewItems[1].viewController as! TabViewController).tabViewItems[3].viewController as! AccomplishmentsViewController).accomplishmentsModel = NetworkManager.shared.description?.accomplishments
                     
                     vc.view.frame = CGRect(x: 0,y: 0, width: 700, height: 350)
                     self.view.window?.contentViewController = vc
@@ -37,7 +37,7 @@ class EntryViewController: NSViewController {
 
             }
         }
-        FirebaseStorageInteractor.shared.fetch(handler: handler)
+        NetworkManager.shared.fetch(handler: handler)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

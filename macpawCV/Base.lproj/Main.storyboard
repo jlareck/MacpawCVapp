@@ -687,7 +687,7 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="139" y="240" width="425" height="301"/>
+                        <rect key="contentRect" x="233" y="204" width="425" height="301"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
@@ -926,7 +926,7 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4l-mA-F3z">
-                                <rect key="frame" x="307" y="202" width="140" height="166"/>
+                                <rect key="frame" x="307" y="195" width="140" height="173"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="HYw-X5-aay"/>
                             </imageView>
@@ -1028,28 +1028,45 @@
             <objects>
                 <viewController title="SkillsViewController" storyboardIdentifier="ThirdVC" id="1UE-3Y-Q1Y" customClass="SkillsViewController" customModule="macpawCV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="42V-64-neF">
-                        <rect key="frame" x="0.0" y="0.0" width="443" height="368"/>
+                        <rect key="frame" x="0.0" y="0.0" width="504" height="370"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5aY-5J-WCj">
-                                <rect key="frame" x="12" y="6" width="427" height="182"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="justified" title="Other skills" id="NnT-NO-QLr">
-                                    <font key="font" metaFont="system" size="22"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwy-UZ-Qkb">
-                                <rect key="frame" x="12" y="196" width="433" height="152"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="truncatingTail" alignment="justified" title="Skills" id="dzV-ex-paq">
-                                    <font key="font" metaFont="system" size="22"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="130" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" translatesAutoresizingMaskIntoConstraints="NO" id="c0m-rG-0yA">
+                                <rect key="frame" x="20" y="126" width="464" height="197"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lwy-UZ-Qkb">
+                                        <rect key="frame" x="3" y="170" width="54" height="27"/>
+                                        <textFieldCell key="cell" alignment="justified" title="Skills" id="dzV-ex-paq">
+                                            <font key="font" metaFont="system" size="22"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5aY-5J-WCj">
+                                        <rect key="frame" x="3" y="13" width="110" height="27"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="justified" title="Other skills" id="NnT-NO-QLr">
+                                            <font key="font" metaFont="system" size="22"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <edgeInsets key="edgeInsets" left="5" right="0.0" top="0.0" bottom="13"/>
+                                <visibilityPriorities>
+                                    <real value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="c0m-rG-0yA" firstAttribute="top" secondItem="42V-64-neF" secondAttribute="top" constant="47" id="A3O-XD-eFk"/>
+                            <constraint firstItem="c0m-rG-0yA" firstAttribute="leading" secondItem="42V-64-neF" secondAttribute="leading" constant="20" id="Vq4-Zo-TmQ"/>
+                            <constraint firstAttribute="trailing" secondItem="c0m-rG-0yA" secondAttribute="trailing" constant="20" id="bFK-Mf-ajA"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="otherSkillsTextField" destination="5aY-5J-WCj" id="n7R-0y-QSx"/>
@@ -1058,7 +1075,7 @@
                 </viewController>
                 <customObject id="ACQ-bl-Ewf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="442.5" y="1595"/>
+            <point key="canvasLocation" x="447" y="1541"/>
         </scene>
         <!--AccomplishmentsViewController-->
         <scene sceneID="wV3-pD-AcB">

@@ -15,9 +15,11 @@ class GeneralInformationViewController: NSViewController {
     @IBOutlet weak var age: NSTextField!
     
     @IBOutlet weak var email: NSTextField!
+    
     @IBOutlet weak var imageView: NSImageView!
     
     @IBOutlet weak var phoneNumber: NSTextField!
+    
     var generalInformationModel: GeneralInformation?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,7 @@ class GeneralInformationViewController: NSViewController {
         email.stringValue = "Email: " + ((generalInformationModel.email))
         phoneNumber.stringValue = "Phone number: "+(generalInformationModel.mobilePhoneNumber)
         
-        FirebaseStorageInteractor.shared.getImage(url: generalInformationModel.imageURL) { (result) in
+        NetworkManager.shared.getImage(url: generalInformationModel.imageURL) { (result) in
             switch result {
             case .success(let image):
                 self.imageView.image = image

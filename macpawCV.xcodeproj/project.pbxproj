@@ -19,7 +19,7 @@
 		1EFE16032274CC390023AF70 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE16022274CC390023AF70 /* SkillsViewController.swift */; };
 		1EFE16052275B2340023AF70 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE16042275B2340023AF70 /* TabViewController.swift */; };
 		1EFE160722760D2C0023AF70 /* DescriptionInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE160622760D2C0023AF70 /* DescriptionInformation.swift */; };
-		1EFE160922760E2A0023AF70 /* FirebaseStorageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE160822760E2A0023AF70 /* FirebaseStorageInteractor.swift */; };
+		1EFE160922760E2A0023AF70 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE160822760E2A0023AF70 /* NetworkManager.swift */; };
 		1EFE160B227611F10023AF70 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE160A227611F10023AF70 /* EntryViewController.swift */; };
 		1EFEF91C227C2AE50096D990 /* AccomplishmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFEF91B227C2AE50096D990 /* AccomplishmentsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -61,7 +61,7 @@
 		1EFE16022274CC390023AF70 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		1EFE16042275B2340023AF70 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		1EFE160622760D2C0023AF70 /* DescriptionInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionInformation.swift; sourceTree = "<group>"; };
-		1EFE160822760E2A0023AF70 /* FirebaseStorageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageInteractor.swift; sourceTree = "<group>"; };
+		1EFE160822760E2A0023AF70 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1EFE160A227611F10023AF70 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		1EFEF91B227C2AE50096D990 /* AccomplishmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,7 +121,7 @@
 				1ECEBF99226B051100ADE0D8 /* macpawCV.entitlements */,
 				1EFEF91E227DEBD70096D990 /* View Controllers */,
 				1EFEF91F227DEC000096D990 /* Models */,
-				1EFE160822760E2A0023AF70 /* FirebaseStorageInteractor.swift */,
+				1EFE160822760E2A0023AF70 /* NetworkManager.swift */,
 			);
 			path = macpawCV;
 			sourceTree = "<group>";
@@ -315,7 +315,7 @@
 				1EFEF91C227C2AE50096D990 /* AccomplishmentsViewController.swift in Sources */,
 				1ECEBFBF226B151200ADE0D8 /* TableViewController.swift in Sources */,
 				1ECEBFBC226B06AA00ADE0D8 /* SplitViewController.swift in Sources */,
-				1EFE160922760E2A0023AF70 /* FirebaseStorageInteractor.swift in Sources */,
+				1EFE160922760E2A0023AF70 /* NetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
