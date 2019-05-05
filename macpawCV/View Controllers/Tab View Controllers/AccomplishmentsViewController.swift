@@ -16,7 +16,7 @@ class AccomplishmentsViewController: NSViewController, NSTableViewDelegate, NSTa
         super.viewDidLoad()
         accomplishmentsTableView?.delegate = self
         accomplishmentsTableView?.dataSource = self
-        accomplishmentsTableView.rowHeight = 70
+        accomplishmentsTableView.rowHeight = 120
 
     }
     func numberOfRows(in tableView: NSTableView) -> Int {
