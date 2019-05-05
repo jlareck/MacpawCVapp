@@ -20,7 +20,7 @@ class AccomplishmentsViewController: NSViewController, NSTableViewDelegate, NSTa
         accomplishmentsTableView?.delegate = self
         accomplishmentsTableView?.dataSource = self
         
-        // Do view setup here.
+
     }
 
     

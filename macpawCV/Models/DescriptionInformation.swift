@@ -9,17 +9,17 @@
 import Foundation
 
 struct Description: Decodable{
-    var generalInformation: GeneralInformation
-    var education: Education
-    var skills: Skills
-    var accomplishments:[String]
+    let generalInformation: GeneralInformation
+    let education: Education
+    let skills: Skills
+    let accomplishments:[String]
 }
 struct GeneralInformation: Decodable {
-    var fullName: String
-    var age: Int
-    var email: String
-    var mobilePhoneNumber: String
-    var imageURL: URL
+    let fullName: String
+    let age: Int
+    let email: String
+    let mobilePhoneNumber: String
+    let imageURL: URL
     init(fullName: String, age: Int, email: String, mobilePhoneNumber: String, imageURL: URL) {
         self.fullName = fullName
         self.age = age
@@ -46,21 +46,21 @@ struct GeneralInformation: Decodable {
     
 }
 struct Education:Decodable {
-    var school:String
-    var highEducation:HighEducation
+    let school:String
+    let highEducation:HighEducation
     struct HighEducation:Decodable {
-        var university: String
-        var faculty: String
-        var specialty: String
-        var other:String
+        let university: String
+        let faculty: String
+        let specialty: String
+        let other:String
     }
 }
 struct Skills:Decodable{
-    var programmingLanguages:[String:String]
-    var others:Others
+    let programmingLanguages:[String:String]
+    let others:Others
     struct Others:Decodable{
-        var git:String
-        var technologies:[String]
-        var algorithms:String
+        let git:String
+        let technologies:[String]
+        let algorithms:String
     }
 }

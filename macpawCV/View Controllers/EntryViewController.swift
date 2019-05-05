@@ -41,12 +41,12 @@ class EntryViewController: NSViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.frame = CGRect(x: 0,y: 0, width: 400, height: 300)
         // Do view setup here.
     }
     override func viewWillAppear() {
         super.viewWillAppear()
-        self.view.frame = CGRect(x: 0,y: 0, width: 400, height: 300)
+       
         //self.view
     }
 }

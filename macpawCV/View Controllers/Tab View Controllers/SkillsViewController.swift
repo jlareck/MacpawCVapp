@@ -19,7 +19,7 @@ class SkillsViewController: NSViewController {
         otherSkillsTextField.lineBreakMode = .byWordWrapping
         skillsTextField.lineBreakMode = .byWordWrapping
         guard let skillsModel = skillsModel else{return print("No data") }
-//        let str = skillsModel.programmingLanguages.enumerated().map({$0.element.key + ": " + $0.element.value + "\n"})
+
         let str = skillsModel.programmingLanguages
             .sorted(by: { (first, second) -> Bool in
             return first.key < second.key

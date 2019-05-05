@@ -37,11 +37,15 @@ final class FirebaseStorageInteractor{
     }
     func getImage(url: URL, completion: @escaping(Result<NSImage, Error>)->()) {
          let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data else { return print("Error") }
+            if let data = data{
                 let image = NSImage(data: data)
                 DispatchQueue.main.async {
                     completion(.success(image!))
                 }
+            }
+            if let error = error{
+                completion(.failure(error))
+            }
         }
         task.resume()
     }

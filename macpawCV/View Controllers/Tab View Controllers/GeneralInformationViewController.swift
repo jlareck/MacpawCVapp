@@ -22,17 +22,17 @@ class GeneralInformationViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let generalInformationModel = generalInformationModel else {return print("No data")}
-        fullName.stringValue = "Full name: "+(generalInformationModel.fullName)
+        fullName.stringValue = (generalInformationModel.fullName)
         age.stringValue = "Age: \(Int32((generalInformationModel.age)))"
         email.stringValue = "Email: " + ((generalInformationModel.email))
         phoneNumber.stringValue = "Phone number: "+(generalInformationModel.mobilePhoneNumber)
         
         FirebaseStorageInteractor.shared.getImage(url: generalInformationModel.imageURL) { (result) in
             switch result {
-            case .success(let value):
-                self.imageView.image = value
-            case .failure(_):
-                print("fail")
+            case .success(let image):
+                self.imageView.image = image
+            case .failure(let error):
+                print(error)
                 
             }
         }

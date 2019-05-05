@@ -886,11 +886,11 @@
             <objects>
                 <viewController title="GeneralInformationViewController" storyboardIdentifier="FirstVC" id="ZhG-hG-Qdo" customClass="GeneralInformationViewController" customModule="macpawCV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="oQ5-gb-DCn">
-                        <rect key="frame" x="0.0" y="0.0" width="417" height="368"/>
+                        <rect key="frame" x="0.0" y="0.0" width="491" height="368"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-tx-huN">
-                                <rect key="frame" x="6" y="274" width="264" height="65"/>
+                                <rect key="frame" x="6" y="258" width="329" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Full name" id="y3i-ir-y8J">
                                     <font key="font" metaFont="system" size="28"/>
@@ -899,7 +899,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ocn-X6-1Gx">
-                                <rect key="frame" x="9" y="218" width="381" height="63"/>
+                                <rect key="frame" x="6" y="195" width="164" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="age" id="f0i-mP-3J7">
                                     <font key="font" metaFont="system" size="28"/>
@@ -908,7 +908,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oZt-D3-eLA">
-                                <rect key="frame" x="9" y="147" width="381" height="63"/>
+                                <rect key="frame" x="9" y="124" width="410" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Email" id="JGH-mo-whX">
                                     <font key="font" metaFont="system" size="28"/>
@@ -917,7 +917,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HTH-gq-PPv">
-                                <rect key="frame" x="6" y="76" width="393" height="63"/>
+                                <rect key="frame" x="9" y="53" width="393" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Phone number" id="Qmf-z6-zvi">
                                     <font key="font" metaFont="system" size="28"/>
@@ -926,7 +926,7 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4l-mA-F3z">
-                                <rect key="frame" x="314" y="268" width="56" height="63"/>
+                                <rect key="frame" x="307" y="202" width="140" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="HYw-X5-aay"/>
                             </imageView>
@@ -942,7 +942,7 @@
                 </viewController>
                 <customObject id="ZIM-of-V9A" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1410.5" y="907"/>
+            <point key="canvasLocation" x="1447.5" y="907"/>
         </scene>
         <!--EducationViewController-->
         <scene sceneID="2tj-3X-alO">
@@ -1016,7 +1016,7 @@
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="EducationTableView" destination="ZLN-KS-jvp" id="2x8-Fw-81p"/>
+                        <outlet property="educationTableView" destination="ZLN-KS-jvp" id="2x8-Fw-81p"/>
                     </connections>
                 </viewController>
                 <customObject id="AUM-7z-OZ4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

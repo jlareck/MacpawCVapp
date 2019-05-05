@@ -11,40 +11,31 @@ import Cocoa
 var index: Int = 0
 class TableViewController: NSViewController,NSTableViewDataSource, NSTableViewDelegate  {
     @IBOutlet weak var tableView: NSTableView!
- //   var delegate: SendManager?
-   // let descVC = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "Desc") as! DescriptionViewController
     
     override func viewWillAppear() {
         tableView.rowHeight = 50
     }
-    private let array = ["General information", "Education", "Skills", "Accomplishments"]
- //   var descArray = ["No experience", "No work", "KNU"]
+    private let sectionArray = ["General information", "Education", "Skills", "Accomplishments"]
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        // Do view setup here.
-       // self.delegate = descVC
         tableView?.delegate = self
         tableView?.dataSource = self
     }
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return array.count
+        return sectionArray.count
     }
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cell = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as! NSTableCellView
-        cell.textField?.stringValue = array[row]
+        cell.textField?.stringValue = sectionArray[row]
         return cell
     }
-
+    
     func tableViewSelectionDidChange(_ notification: Notification) {
         index = tableView.selectedRow
-      //  print(descArray[index])
-     //
-    let userInfo = ["info":index]
         
-       // delegate?.sendString(str: descArray[index])
-   
-    NotificationCenter.default.post(name: NSNotification.Name("selectionChanged"), object: nil, userInfo: userInfo)
+        let userInfo = ["info":index]
+        
+        NotificationCenter.default.post(name: NSNotification.Name("selectionChanged"), object: nil, userInfo: userInfo)
     }
-
+    
 }

@@ -10,19 +10,19 @@ import Cocoa
 
 class EducationViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     
-    @IBOutlet weak var EducationTableView: NSTableView!
+    @IBOutlet weak var educationTableView: NSTableView!
     var educationModel: Education?
     var educationArray: [String]?
-    override func viewWillAppear() {
-        EducationTableView.rowHeight = 50
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        EducationTableView?.delegate = self
-        EducationTableView?.dataSource = self
+        educationTableView.rowHeight = 50
+      
+        educationTableView?.delegate = self
+        educationTableView?.dataSource = self
         guard let educationModel = educationModel else {return print("No data")}
         educationArray = ["School: \((educationModel.school))","University: \((educationModel.highEducation.university))", "Faculty: \((educationModel.highEducation.faculty))","Specialty: \((educationModel.highEducation.specialty))", "Other information: \((educationModel.highEducation.other))"]
-        // Do view setup here.
+      
     }
 
     
