@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Description: Decodable{
+struct Description: Decodable {
     let generalInformation: GeneralInformation
     let education: Education
     let skills: Skills
-    let accomplishments:[String]
+    let accomplishments: [String]
 }
 struct GeneralInformation: Decodable {
     let fullName: String
@@ -46,21 +46,17 @@ struct GeneralInformation: Decodable {
     
 }
 struct Education:Decodable {
-    let school:String
-    let highEducation:HighEducation
-    struct HighEducation:Decodable {
+    let school: String
+    let highEducation: HighEducation
+    struct HighEducation: Decodable {
         let university: String
         let faculty: String
         let specialty: String
-        let other:String
+        let other: String
     }
 }
-struct Skills:Decodable{
-    let programmingLanguages:[String:String]
-    let others:Others
-    struct Others:Decodable{
-        let git:String
-        let technologies:[String]
-        let algorithms:String
-    }
+struct Skills: Decodable {
+    let programmingLanguages: [String:String]
+    let othersSkills: [String:String]
+
 }

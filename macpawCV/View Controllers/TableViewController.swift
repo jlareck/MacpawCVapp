@@ -15,6 +15,7 @@ class TableViewController: NSViewController,NSTableViewDataSource, NSTableViewDe
     override func viewWillAppear() {
         tableView.rowHeight = 50
     }
+    
     private let sectionArray = ["General information", "Education", "Skills", "Accomplishments"]
     override func viewDidLoad() {
         super.viewDidLoad()

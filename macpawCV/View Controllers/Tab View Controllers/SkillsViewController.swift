@@ -27,8 +27,13 @@ class SkillsViewController: NSViewController {
             .reduce("Programming languages: \n"){$0 + $1.key + ": " + $1.value + "\n"}
         
         skillsTextField.stringValue = str
+    
+        let strOthers = skillsModel.othersSkills.sorted(by: { (first, second) -> Bool in
+            return first.key < second.key
+        })
+            .reduce("Other SKills: \n"){$0 + $1.key + ": " + $1.value + "\n"}
         
-        otherSkillsTextField.stringValue = "Other Skills: \nGit: \((skillsModel.others.git)) \nTechnologies: \((skillsModel.others.technologies.joined(separator: ", "))+".") \nAlgorithms: \((skillsModel.others.algorithms))"
+        otherSkillsTextField.stringValue = strOthers
       
     }
     

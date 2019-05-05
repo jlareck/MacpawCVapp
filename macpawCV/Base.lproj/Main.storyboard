@@ -685,7 +685,7 @@
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="233" y="204" width="425" height="301"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -907,7 +907,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-tx-huN">
                                 <rect key="frame" x="6" y="258" width="329" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Full name" id="y3i-ir-y8J">
+                                <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" title="Full name" id="y3i-ir-y8J">
                                     <font key="font" metaFont="system" size="28"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -916,7 +916,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ocn-X6-1Gx">
                                 <rect key="frame" x="6" y="195" width="164" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="age" id="f0i-mP-3J7">
+                                <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" title="age" id="f0i-mP-3J7">
                                     <font key="font" metaFont="system" size="28"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -925,7 +925,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oZt-D3-eLA">
                                 <rect key="frame" x="9" y="124" width="410" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Email" id="JGH-mo-whX">
+                                <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" title="Email" id="JGH-mo-whX">
                                     <font key="font" metaFont="system" size="28"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -934,7 +934,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HTH-gq-PPv">
                                 <rect key="frame" x="9" y="53" width="393" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Phone number" id="Qmf-z6-zvi">
+                                <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" title="Phone number" id="Qmf-z6-zvi">
                                     <font key="font" metaFont="system" size="28"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -969,7 +969,7 @@
                         <subviews>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="45" horizontalPageScroll="10" verticalLineScroll="45" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hD-l8-qj5">
                                 <rect key="frame" x="0.0" y="0.0" width="479" height="409"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="rfv-mo-eep">
                                     <rect key="frame" x="1" y="1" width="477" height="407"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1001,7 +1001,7 @@
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RXd-Do-e3D">
                                                                     <rect key="frame" x="0.0" y="-9" width="474" height="52"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Education" id="0ON-uL-ujb">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="Education" id="0ON-uL-ujb">
                                                                         <font key="font" metaFont="system" size="21"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1044,7 +1044,7 @@
                 <viewController title="SkillsViewController" storyboardIdentifier="ThirdVC" id="1UE-3Y-Q1Y" customClass="SkillsViewController" customModule="macpawCV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="42V-64-neF">
                         <rect key="frame" x="0.0" y="0.0" width="505" height="370"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" translatesAutoresizingMaskIntoConstraints="NO" id="c0m-rG-0yA">
                                 <rect key="frame" x="6" y="283" width="479" height="67"/>
@@ -1134,7 +1134,7 @@
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kom-VM-rLU">
                                                                     <rect key="frame" x="0.0" y="-9" width="495" height="52"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Accomplishments" id="89v-ii-pw7">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="Accomplishments" id="89v-ii-pw7">
                                                                         <font key="font" metaFont="system" size="20"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

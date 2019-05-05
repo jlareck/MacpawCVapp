@@ -12,19 +12,13 @@ class AccomplishmentsViewController: NSViewController, NSTableViewDelegate, NSTa
 
     @IBOutlet weak var accomplishmentsTableView: NSTableView!
     var accomplishmentsModel: [String]?
-    override func viewWillAppear() {
-        accomplishmentsTableView.rowHeight = 70
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         accomplishmentsTableView?.delegate = self
         accomplishmentsTableView?.dataSource = self
-        
+        accomplishmentsTableView.rowHeight = 70
 
     }
-
-    
-    
     func numberOfRows(in tableView: NSTableView) -> Int {
         
         return (NetworkManager.shared.description?.accomplishments.count ?? 3)

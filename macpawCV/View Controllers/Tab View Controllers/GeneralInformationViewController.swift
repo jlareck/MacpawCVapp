@@ -23,7 +23,7 @@ class GeneralInformationViewController: NSViewController {
     var generalInformationModel: GeneralInformation?
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let generalInformationModel = generalInformationModel else {return print("No data")}
+        guard let generalInformationModel = generalInformationModel else { return print("No data") }
         fullName.stringValue = (generalInformationModel.fullName)
         age.stringValue = "Age: \(Int32((generalInformationModel.age)))"
         email.stringValue = "Email: " + ((generalInformationModel.email))

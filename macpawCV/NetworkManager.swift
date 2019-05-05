@@ -13,7 +13,7 @@ enum NetworkError: Error {
 final class NetworkManager{
     private init(){}
     static let shared = NetworkManager.init()
-    private let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/cvbeta-e7808.appspot.com/o/profile.json?alt=media&token=2f4bd7b1-4408-4c98-9132-dd94a4cdd974")!
+    private let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/cvbeta-e7808.appspot.com/o/profile.json?alt=media&token=ce67488a-15e4-4e2e-bc86-27e972fe023a")!
     private(set) var description: Description?
     
     func fetch(handler: @escaping (Result<Description, Error>)->()) {
